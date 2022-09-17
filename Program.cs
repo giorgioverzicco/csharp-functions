@@ -70,8 +70,7 @@ int Quadrato(int numero)
 
 int[] ElevaArrayAlQuadrato(int[] array)
 {
-    int[] squareNumbers = new int[array.Length];
-    array.CopyTo(squareNumbers, 0);
+    int[] squareNumbers = (int[]) array.Clone();
     
     for (int i = 0; i < squareNumbers.Length; i++)
     {
