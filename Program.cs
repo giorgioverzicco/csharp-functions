@@ -1,3 +1,15 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿void StampaArray(int[] array)
+{
+    Console.Write("[");
 
-Console.WriteLine("Hello, World!");
+    int i;
+    for (i = 0; i < array.Length - 1; i++)
+    {
+        Console.Write(array[i]);
+        Console.Write(",");
+    }
+    
+    Console.Write(array[i]);
+    
+    Console.Write("]\n");
+}
