@@ -18,3 +18,16 @@ int Quadrato(int numero)
 {
     return numero * numero;
 }
+
+int[] ElevaArrayAlQuadrato(int[] array)
+{
+    int[] squareNumbers = new int[array.Length];
+    array.CopyTo(squareNumbers, 0);
+    
+    for (int i = 0; i < squareNumbers.Length; i++)
+    {
+        squareNumbers[i] *= squareNumbers[i];
+    }
+
+    return squareNumbers;
+}
