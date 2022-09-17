@@ -32,6 +32,14 @@ Console.WriteLine($"Ecco la somma di tutti i numeri: {sumOfNumbers}");
 int sumOfSquaredNumbers = SommaElementiArray(squaredNumbers);
 Console.WriteLine($"Ecco la somma di tutti i numeri che sono stati elevati al quadrato: {sumOfSquaredNumbers}");
 
+Console.WriteLine();
+
+// extra fattoriale
+Console.WriteLine("Digita il numero del quale vuoi calcolare il fattoriale:");
+Console.Write("> ");
+int numToCalculateFactorial = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine($"Fattoriale di {numToCalculateFactorial} = {factorial(numToCalculateFactorial)}");
+
 // Functions
 
 int[] GetUserEnteredNumbers(int maxNumbers)
@@ -90,4 +98,15 @@ int SommaElementiArray(int[] array)
     }
 
     return sum;
+}
+
+// fattoriale
+long factorial(int number)
+{
+    if (number <= 1)
+    {
+        return 1;
+    }
+    
+    return number * factorial(number - 1);
 }
