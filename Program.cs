@@ -75,7 +75,7 @@ int[] ElevaArrayAlQuadrato(int[] array)
     
     for (int i = 0; i < squareNumbers.Length; i++)
     {
-        squareNumbers[i] *= squareNumbers[i];
+        squareNumbers[i] = Quadrato(squaredNumbers[i]);
     }
 
     return squareNumbers;
