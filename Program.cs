@@ -13,3 +13,8 @@
     
     Console.Write("]\n");
 }
+
+int Quadrato(int numero)
+{
+    return numero * numero;
+}
