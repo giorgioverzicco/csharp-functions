@@ -1,4 +1,11 @@
-﻿int[] numbers = { 2, 6, 7, 5, 3, 9 };
+﻿// OLD int[] numbers = { 2, 6, 7, 5, 3, 9 };
+
+// BONUS
+Console.WriteLine("Quanti numeri vuoi digitare?");
+Console.Write("> ");
+
+int maxInputs = Convert.ToInt32(Console.ReadLine());
+int[] numbers = GetUserEnteredNumbers(maxInputs);
 
 // 1
 Console.WriteLine("Ecco la lista di numeri:");
@@ -24,6 +31,21 @@ Console.WriteLine($"Ecco la somma di tutti i numeri: {sumOfNumbers}");
 // 4
 int sumOfSquaredNumbers = SommaElementiArray(squaredNumbers);
 Console.WriteLine($"Ecco la somma di tutti i numeri che sono stati elevati al quadrato: {sumOfSquaredNumbers}");
+
+// Functions
+
+int[] GetUserEnteredNumbers(int maxNumbers)
+{
+    int[] numbers = new int[maxNumbers];
+    
+    for (int i = 0; i < numbers.Length; i++)
+    {
+        Console.WriteLine("\nDigita un numero intero da aggiungere:");
+        numbers[i] = Convert.ToInt32(Console.ReadLine());
+    }
+
+    return numbers;
+}
     
 void StampaArray(int[] array)
 {
